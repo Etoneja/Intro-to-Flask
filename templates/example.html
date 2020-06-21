@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example template!</title>
+</head>
+<body>
+<h1>Guestboom</h1>
+<a href="{{ url_for('bp.sign') }}">add new</a>
+
+{% for item in items %}
+    <p>{{ item.name }} - {{ item.message }}</p>
+{% endfor %}
+</body>
+</html>
