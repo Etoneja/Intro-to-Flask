@@ -1,8 +1,6 @@
-from flask import render_template, redirect, request, url_for
-from flask import Blueprint
-from db.db import db
-from schemas.schemas import Comments
-
+from flask import render_template, redirect, request, url_for, Blueprint
+from app.db import db
+from app.db.schemas import Comments
 
 bp = Blueprint(
     'bp', __name__, template_folder='templates'
