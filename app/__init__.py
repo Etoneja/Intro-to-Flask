@@ -12,7 +12,7 @@ def create_app():
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     from . import db, routes
-    from .db.schemas import Comments, User
+    from .db.schemas import Comment, User
 
     db.init_app(app)
     routes.init_app(app)
@@ -21,7 +21,7 @@ def create_app():
     def make_shell_context():
         return {
             "db": db.db,
-            "Comments": Comments,
+            "Comment": Comment,
             "User": User
         }
 
